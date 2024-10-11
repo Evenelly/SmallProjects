@@ -9,14 +9,16 @@ var family = {
     janice:{
         age: 39,
         likes: ["sew"],
-        disklikes: ["neighboors"]
+        dislikes: ["neighboors"]
     },
     julia:{
         age: 9,
-        likes: ["pizza"]
+        likes: ["pizza"],
+        dislikes: []
     },
     judit:{
         age: 2,
+        likes: [],
         dislikes: ["cars", "teletubbies", 
             {
             age: 10,
@@ -30,4 +32,9 @@ var family = {
     }
 };
 
-console.log(family.johan.dislikes)
+console.log("before bd: " + family.johan.age);
+family.johan.age += 1;
+console.log("after bd: " + family.johan.age);
+
+family.julia.dislikes.push(family.johan);
+console.log(family.julia.dislikes);
